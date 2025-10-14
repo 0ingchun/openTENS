@@ -68,10 +68,3 @@
 
 ## ⚙️ 安装与快速使用 <a name="安装"></a>
 
-
-### 安装步骤
-```bash
-git clone https://github.com/yourusername/openTENS.git
-cd openTENS
-pip install -r requirements.txt
-python examples/run_demo.py
