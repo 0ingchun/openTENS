@@ -58,7 +58,7 @@
 **openTENS** 由以下成员发起：
 
 - **刘一博** & **滕孝鸣**，西交利物浦大学（XJTLU）  
-  指导教师：**Prof. Martijn ten Bhömer**、**Dr. Suneel Kumar Kommuri**
+  指导教师：**Prof. Martijn ten Bhömer**
 
 项目灵感源自我们在 “H-Bridge Bipolar Stimulation System with Real-Time GSR Feedback” 的研究。  
 我们希望将科研成果转化为开放平台，让更多人能安全地探索 EMS 技术。
