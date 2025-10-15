@@ -23,14 +23,6 @@ Thank you for your interest in **openTENS** — an open-source electrical stimul
 This README provides essential information about the project.  
 You can jump directly to the following sections:
 
-* [What are we doing and why?](#what-are-we-doing)
-* [Who is developing openTENS?](#who-is-developing)
-* [What do we need?](#what-do-we-need)
-* [How to contribute](#how-to-contribute)
-* [Installation and Quick Start](#installation)
-* [Contact Us](#contact)
-* [Additional Resources](#resources)
-
 ---
 
 ## 💡 What Are We Doing?
