@@ -52,6 +52,9 @@ With openTENS, you can quickly prototype:
 
 ---
 
+## 🛡️ Safety Notice
+Please read the [Safety Disclaimer](SAFETY_NOTICE.md) carefully before assembling or using any openTENS hardware.
+
 ## 👨‍🔬 Who Is Developing openTENS?
 
 **openTENS** is initiated by:
@@ -73,3 +76,5 @@ We aim to transform our academic work into an open platform that enables more pe
    ```bash
    git clone https://github.com/yourusername/openTENS.git
    cd openTENS
+
+   
