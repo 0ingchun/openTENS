@@ -71,18 +71,6 @@ the following schematics illustrate the **core circuit design** and **signal flo
 ##  Safety Notice
 Please read the [Safety Disclaimer](SAFETY_NOTICE.md) carefully before assembling or using any openTENS hardware.
 
-##  Who Is Developing openTENS?
-
-**openTENS** is initiated by:
-
-- **Yibo Liu** & **Xiaoming Teng**, School of Advanced Technology, Xi’an Jiaotong-Liverpool University (XJTLU)  
-  Supervised by **Prof. Martijn ten Bhömer**
-
-The project is inspired by our previous research on  
-*“H-Bridge Bipolar Stimulation System with Real-Time GSR Feedback.”*  
-We aim to transform our academic work into an open platform that enables more people to explore EMS technology safely and creatively.
-
----
 
 ##  SDK and Library Documentation
 
