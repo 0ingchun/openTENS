@@ -1,7 +1,7 @@
 
 ---
 
-## 🧩 Data Structure
+##  Data Structure
 
 ### `shockPluse_t`
 
@@ -23,9 +23,9 @@ Defines all runtime parameters for one stimulation cycle.
 
 ---
 
-## ⚙️ Core Functions
+##  Core Functions
 
-### 🧾 Initialization and Configuration
+###  Initialization and Configuration
 
 #### `void shockIOPinConfig(shockPluse_t* s)`
 > Configure the I/O pins and timer handles for stimulation output.
@@ -38,7 +38,7 @@ Defines all runtime parameters for one stimulation cycle.
 
 ---
 
-### ⚡ PWM Control
+###  PWM Control
 
 #### `void pwmCalculatePSC_ARR(uint32_t freq, uint32_t* PSC, uint32_t* ARR)`
 > Calculate prescaler and auto-reload values based on target PWM frequency.
@@ -51,7 +51,7 @@ Defines all runtime parameters for one stimulation cycle.
 
 ---
 
-### 🔁 Stimulation Sequences
+###  Stimulation Sequences
 
 #### `void shockBoostVol(shockPluse_t* s)`
 > Generate the high-voltage charging pulse sequence.
@@ -67,7 +67,7 @@ Defines all runtime parameters for one stimulation cycle.
 
 ---
 
-### 🧮 Mapping & Utility
+###  Mapping & Utility
 
 #### `long longMap(long value, long in_min, long in_max, long out_min, long out_max)`
 > Linear integer mapping between two ranges.
@@ -80,7 +80,7 @@ Defines all runtime parameters for one stimulation cycle.
 
 ---
 
-### 🧠 Adaptive Feedback
+###  Adaptive Feedback
 
 #### `void shockAutoAdjust(uint32_t adcValue, shockPluse_t* s)`
 > Automatically adjust stimulation intensity based on ADC feedback signal (e.g., GSR).
@@ -96,7 +96,7 @@ Algorithm features:
 
 ---
 
-## 🧪 Example Usage
+##  Example Usage
 
 ```c
 #include "shockModule.h"
