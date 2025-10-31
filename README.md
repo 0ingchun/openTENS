@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# ⚡ openTENS: Open-Source Electrical Stimulation System
+#  openTENS: Open-Source Electrical Stimulation System
 
 <p align="center">
   <img alt="banner" src="images/3d.png" width="600">
