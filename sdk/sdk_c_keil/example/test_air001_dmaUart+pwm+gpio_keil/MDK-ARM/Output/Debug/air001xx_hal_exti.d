@@ -1,0 +1,31 @@
+./output/debug/air001xx_hal_exti.o: \
+  ..\Drivers\AIR001xx_HAL_Driver\Src\air001xx_hal_exti.c \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal.h \
+  ..\Inc\air001xx_hal_conf.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_rcc.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_def.h \
+  ..\Drivers\CMSIS\Device\AIR001xx\Include\air001xx.h \
+  ..\Drivers\CMSIS\Device\AIR001xx\Include\air001_dev.h \
+  ..\Drivers\CMSIS\Include\core_cm0plus.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Drivers\CMSIS\Include\core_cmInstr.h \
+  ..\Drivers\CMSIS\Include\cmsis_armcc_V6.h \
+  ..\Drivers\CMSIS\Include\core_cmFunc.h \
+  ..\Drivers\CMSIS\Device\AIR001xx\Include\system_air001xx.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_rcc_ex.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_exti.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_gpio.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_gpio_ex.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_cortex.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_dma.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_dma_ex.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_adc.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_adc_ex.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_crc.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_flash.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_pwr.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_tim.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_tim_ex.h \
+  ..\Drivers\AIR001xx_HAL_Driver\Inc\air001xx_hal_uart.h
