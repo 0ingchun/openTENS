@@ -51,6 +51,22 @@ With openTENS, you can quickly prototype:
 - Intelligent human-computer interaction and affective computing studies  
 
 ---
+##  System Overview and Hardware Design
+
+To help you better understand how **openTENS** works at the hardware level,  
+the following schematics illustrate the **core circuit design** and **signal flow** of the system.
+
+<p align="center">
+  <img src="images/Schematic1.png" alt="Hardware Schematic 1" width="650">
+</p>
+
+<p align="center">
+  <img src="images/Schematic2.png" alt="Hardware Schematic 2" width="650">
+</p>
+
+<p align="center">
+  <em>Figure: Core electrical stimulation circuit and control module of openTENS.</em>
+</p>
 
 ##  Safety Notice
 Please read the [Safety Disclaimer](SAFETY_NOTICE.md) carefully before assembling or using any openTENS hardware.
