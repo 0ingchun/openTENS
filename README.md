@@ -68,6 +68,11 @@ We aim to transform our academic work into an open platform that enables more pe
 
 ---
 
+##  SDK and Library Documentation
+
+To learn how to use the SDK and built-in library functions, please visit:  
+ [SDK & Library Guide](sdk/sdk.md)
+
 ##  Installation and Quick Start <a name="installation"></a>
 
 > (This section can include hardware setup and SDK installation instructions later.)
