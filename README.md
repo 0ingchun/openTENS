@@ -7,7 +7,7 @@
 #  openTENS: Open-Source Electrical Stimulation System
 
 <p align="center">
-  <img alt="banner" src="images/3d.png" width="600">
+  <img alt="banner" src="images/3d1.png" width="600">
 </p>
 <p align="center">
   A programmable, safe, and flexible electrical stimulation platform for research and wearable applications
