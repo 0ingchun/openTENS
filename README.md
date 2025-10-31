@@ -15,9 +15,9 @@
 
 ---
 
-## 👋 Welcome to openTENS!
+##  Welcome to openTENS!
 
-First of all, welcome! 🎉🎉🎉  
+First of all, welcome! 
 Thank you for your interest in **openTENS** — an open-source electrical stimulation platform designed for researchers, designers, and developers.
 
 This README provides essential information about the project.  
@@ -25,16 +25,16 @@ You can jump directly to the following sections:
 
 ---
 
-## 💡 What Are We Doing?
+##  What Are We Doing?
 
-### 🧩 Background & Problem
+### Background & Problem
 
 - Most commercial **TENS/EMS devices** are closed systems — users cannot modify waveforms or implement closed-loop control  
 - Researchers who want to explore **different stimulation patterns or modes** must build custom circuits, which increases cost and safety risks  
 - There is a lack of **standardized hardware interfaces** for combining electrical stimulation with **GSR, EMG, IMU**, or other sensors  
 - In wearable applications, the **signal quality and comfort of textile electrodes** remain inconsistent and difficult to evaluate  
 
-### 🚀 Our Solution
+###  Our Solution
 
 **openTENS** aims to become an open-source, Arduino-like platform for customizable electrical stimulation:
 
@@ -52,10 +52,10 @@ With openTENS, you can quickly prototype:
 
 ---
 
-## 🛡️ Safety Notice
+##  Safety Notice
 Please read the [Safety Disclaimer](SAFETY_NOTICE.md) carefully before assembling or using any openTENS hardware.
 
-## 👨‍🔬 Who Is Developing openTENS?
+##  Who Is Developing openTENS?
 
 **openTENS** is initiated by:
 
@@ -68,7 +68,7 @@ We aim to transform our academic work into an open platform that enables more pe
 
 ---
 
-## ⚙️ Installation and Quick Start <a name="installation"></a>
+##  Installation and Quick Start <a name="installation"></a>
 
 > (This section can include hardware setup and SDK installation instructions later.)
 
