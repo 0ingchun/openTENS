@@ -1,10 +1,8 @@
-openTENS
+## Hardware
 
-## PCB & Schematic
+We recommend **AC_TENS_version2** for a shock moudle and **adapterBoard_version1** to adapted your breadboard.
 
-We recommand **AC_TENS_version2** for a shock moudle and **adapterBoard_version1** to adapte your breadboard.
-
-You can just donwload PCB Greber or check project files in easyEDA.
+You can just download PCB Gerber or check project files in easyEDA.
 
 ---
 
@@ -23,7 +21,7 @@ You can just donwload PCB Greber or check project files in easyEDA.
 | 2-O   | Output | 交流电脉冲输出 | 理疗电极 |
 
 <p align="center">
-  <img src="../images/AC_TENS_version2_3D.png" alt="Hardware Schematic" width="650">
+  <img src="../images/AC_TENS_version2_3D.png" width="650">
 </p>
 
 <p align="center">
@@ -42,7 +40,7 @@ You can just donwload PCB Greber or check project files in easyEDA.
 | 2.5mm     | 2.5mm耳机孔   | 可连接标准理疗仪电极线 |
 
 <p align="center">
-  <img src="../images/adapterBoard_version1_3D.png" alt="Hardware PCB" width="650">
+  <img src="../images/adapterBoard_version1_3D.png" width="500">
 </p>
 
 <p align="center">
@@ -59,7 +57,7 @@ AD TIME~
 powered by Arduino & ESP32
 
 <p align="center">
-  <img src="../images/dogoLab_shocker_c3_version1_3D.png" alt="Hardware PCB" width="650">
+  <img src="../images/dogoLab_shocker_c3_version1_3D.png" width="300">
 </p>
 
 ---

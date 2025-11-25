@@ -41,7 +41,7 @@
 * 内置 **硬件限流与隔离机制**，确保使用安全
 * 集成 **实时 GSR 测量模块 → 便于实现闭环控制**
 * 支持 **导电纺织电极与多模态传感扩展**
-* 完全开源：**固件 + PCB** 均可修改
+* 开源，**固件 + PCB** 均可修改
 
 借助 openTENS，你可以快速实现：
 
@@ -57,7 +57,7 @@
 下面展示了核心电路与模块设计原理图：
 
 <p align="center">
-  <img src="images/AC_TENS_version2_Schematic.png" alt="Hardware Schematic" width="650">
+  <img src="images/AC_TENS_version2_Schematic.png" width="650">
 </p>
 
 <p align="center">
@@ -65,7 +65,7 @@
 </p>
 
 <p align="center">
-  <img src="images/AC_TENS_version2_PCB.png" alt="Hardware PCB" width="650">
+  <img src="images/AC_TENS_version2_PCB.png" width="650">
 </p>
 
 <p align="center">
@@ -107,6 +107,20 @@
 
 ---
 
+## ⚠️ 免责声明
+
+- 軟體內所有網頁內容（包括可能存在的付費項目），均与整活者無任何關聯！
+
+- 軟體圖標与開發設計歸项目设计者所有，有關一切禁止商用与公共場合傳播。
+
+- 軟體內容僅供實踐學習使用，使用時請遵守當地法律法規，并自覺在24小時內刪除有關違規內容。
+
+- 下載此项目或使用此项目下的硬件或軟體默認遵守以上內容
+
+- 请遵守该项目的开源协议
+
+---
+
 ## 👨‍🔬 谁在开发 openTENS？
 
 openTENS 由以下成员团队发起：  
@@ -122,13 +136,35 @@ Paper: **https://ieeexplore.ieee.org/abstract/document/11120621**
 
 ---
 
+> ### **版權信息 Copyright information**
+
+版權所有 (c) 2025 [0ingChun](https://github.com/0ingchun)，保留所有權力。
+
+Copyright (c) 2025 [0ingChun](https://github.com/0ingchun), All rights reserved.
+
+---
+
+## 开源协议
+
+> ### **開源協議 Open source license**
+
+硬件原理图和 PCB 设计在 **Apache 2.0** 许可下发布。
+
+Hardware schematics and PCB designs are released under the **Apache 2.0**.
+
+固件和软件在 **Apache 2.0** 许可证下发布。
+
+Firmware and software are released under the **Apache 2.0** License.
+
+---
+
 ## 🧭 相关开源项目
 
 [**dogoLab - 开源的带体动传感器的遥控电刺激设备**](https://github.com/0ingchun/dogoLab)
 powered by Arduino & ESP32
 
 <p align="center">
-  <img src="images/dogoLab_shocker_c3_version1_3D.png" alt="Hardware PCB" width="650">
+  <img src="images/dogoLab_shocker_c3_version1_3D.png" width="300">
 </p>
 
 ---
