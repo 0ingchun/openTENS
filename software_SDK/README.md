@@ -53,7 +53,7 @@ shockAllInit(&shockPluse_s);
 Web UI 示例：
 可直接通过滑块调整参数，手动测试好想要的脉冲参数后，即可写入结构体：
 
-<p align="center"> <img src="images/web_ui_demo.png" width="450"> </p>
+<p align="center"> <img src="../images/web_ui_demo_version1.png" width="450"> </p>
 
 对应代码设置（示例）：
 
