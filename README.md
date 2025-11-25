@@ -96,11 +96,9 @@ To use the SDK and driver libraries for openTENS, please visit:
    cd openTENS
    ```
 
-2. 👉 Read the **Hardware PCB Guide**:  
-   `hardware_PCB/README.md`
+2. 👉 Read the [**Hardware PCB Guide**](hardware_PCB/README.md)
 
-3. 👉 Read the **SDK & Software Library Guide**:  
-   `software_SDK/README.md`
+3. 👉 Read the [**SDK & Software Library Guide**](software_SDK/README.md)
 
 ---
 
