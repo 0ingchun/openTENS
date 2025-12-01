@@ -10,7 +10,7 @@
 
 ## 🔧 快速部署 Quick Start（Dev Library for Arduino / ESP32 / Keilu5_c）
 
-openTENS 提供 通用的电刺激开发库，可移植到任何 Arduino / ESP32 项目中，仅需 2 个文件（.c / .h） 即可实现电刺激功能。
+openTENS 提供 通用的电刺激开发库，可移植到任何 ArduinoAVR / ESP8266 / ESP32 项目中，仅需 2 个文件（.c / .h） 即可实现电刺激功能。
 
 ---
 
