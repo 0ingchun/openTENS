@@ -2,7 +2,13 @@
 
 ---
 
-## 🚀 Quick Start（Dev Library for Arduino / ESP32 / Keilu5_c）
+## 🚀 初步尝试 Try First
+
+👉 [尝试openTENS电刺激模块基于ESP32C3的WebUI示例 - 教程](sdk_arduino/README.md)
+
+---
+
+## 🔧 快速部署 Quick Start（Dev Library for Arduino / ESP32 / Keilu5_c）
 
 openTENS 提供 通用的电刺激开发库，可移植到任何 Arduino / ESP32 项目中，仅需 2 个文件（.c / .h） 即可实现电刺激功能。
 
@@ -57,7 +63,7 @@ shockAllInit(&shockPluse_s);
 Web UI 示例：
 可直接通过滑块调整参数，手动测试好想要的脉冲参数后，即可写入结构体：
 
-<p align="center"> <img src="../images/web_ui_demo_version1.png" width="450"> </p>
+<p align="center"> <img src="../images/web_ui_demo_version1.png" width="300"> </p>
 
 对应代码设置（示例）：
 

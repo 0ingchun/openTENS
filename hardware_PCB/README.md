@@ -21,8 +21,9 @@ You can just download PCB Gerber or check project files in easyEDA.
 | 2-O   | Output | 交流电脉冲输出 | 理疗电极 |
 
 <p align="center">
-  <img src="../images/AC_TENS_version2_3D.png" width="650">
+  <img src="../images/AC_TENS_version2_3D.png" width="500">
 </p>
+
 
 <p align="center">
   <em>图：openTENS AC_TENS_version2</em>
@@ -40,8 +41,9 @@ You can just download PCB Gerber or check project files in easyEDA.
 | 2.5mm     | 2.5mm耳机孔   | 可连接标准理疗仪电极线 |
 
 <p align="center">
-  <img src="../images/adapterBoard_version1_3D.png" width="500">
+  <img src="../images/adapterBoard_version1_3D.png" width="400">
 </p>
+
 
 <p align="center">
   <em>图：openTENS adapterBoard_version1</em>
