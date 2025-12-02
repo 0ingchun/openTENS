@@ -16,15 +16,42 @@ void setup() {
   shockAllInit(&shockPluse_s);	// 初始化电刺激功能
 }
 
+int settings_temp[5] = {0};
+
+void SenseSetting_1()
+{
+  settings_temp[0] = 10; // Level
+  settings_temp[1] = 70;  // Width %
+  settings_temp[2] = 1;  // Trig Period ms
+  settings_temp[3] = 10;  // Count
+  settings_temp[4] = 1; // Sense Period ms
+}
+
+void SenseSetting_2()
+{
+  settings_temp[0] = 10; // Level
+  settings_temp[1] = 50;  // Width %
+  settings_temp[2] = 5;  // Trig Period ms
+  settings_temp[3] = 10;  // Count
+  settings_temp[4] = 1; // Sense Period ms
+}
+
 void loop() {
+
+  SenseSetting_2();
+	// Pass the address of the struct and the array
+  shockPluseSenseSet(&shockPluse_s, settings_temp);
+  shockPulseSenseUnit(&shockPluse_s);
 	
 	// 0rder:{Level,Width us, Trig Period ms, Count, Sense Period ms}
-	int settings[5] = {5, 70, 40, 7, 500};
-	
+	SenseSetting_1();
 	// Pass the address of the struct and the array
-  shockPluseSenseSet(&shockPluse_s, settings);
-  
-  
+  shockPluseSenseSet(&shockPluse_s, settings_temp);
+  shockPulseSenseUnit(&shockPluse_s);
+
+  SenseSetting_2();
+	// Pass the address of the struct and the array
+  shockPluseSenseSet(&shockPluse_s, settings_temp);
   shockPulseSenseUnit(&shockPluse_s);
 
 }

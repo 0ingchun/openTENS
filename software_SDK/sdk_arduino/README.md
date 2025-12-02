@@ -91,7 +91,7 @@ You can just download PCB Gerber or check project files in easyEDA.
    | 参数           | 效果                                                         | 单位 |
    | -------------- | ------------------------------------------------------------ | ---- |
    | 感觉强度       | （0时无感觉）调节感觉强弱                                    | 级   |
-   | 输出脉冲脉宽   | （必须大于0）感觉越小感觉越轻抚，越大越刺痛，推荐设置70用于测试 | 微秒 |
+   | 输出脉冲脉宽   | （必须大于0）感觉越小感觉越轻抚，越大越刺痛，推荐设置70用于测试 | %    |
    | 输出脉冲周期   | （必须大于0）越小感觉越用力，越大越无力                      | 毫秒 |
    | 感觉的脉冲个数 | （至少为1）本次感觉里有几个脉冲                              | 个   |
    | 感觉的脉冲周期 | （可以为0）本次感觉结束后的间隔休息时间                      | 毫秒 |
@@ -187,7 +187,7 @@ p.s. 可以参考一下结构体内部设置（在 shockModule.c 中）：
 ```
 void shockPluseSenseSet(shockPluse_t* shockPluse_s_p, int* p_temp){
     shockPluse_s_p->boost_Level = p_temp[0];  // 强度
-    shockPluse_s_p->trig_Width = p_temp[1];   // 脉宽 us
+    shockPluse_s_p->trig_Width = p_temp[1];   // 脉宽 %
     shockPluse_s_p->trig_T = p_temp[2];       // 脉冲周期 ms
     shockPluse_s_p->trig_Count = p_temp[3];   // 单次刺激个数
     shockPluse_s_p->usense_T = p_temp[4];     // 感觉周期

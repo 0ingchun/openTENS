@@ -94,7 +94,7 @@ p.s. 可以参考一下结构体内部设置（在 shockModule.c 中）：
 ```
 void shockPluseSenseSet(shockPluse_t* shockPluse_s_p, int* p_temp){
     shockPluse_s_p->boost_Level = p_temp[0];  // 强度
-    shockPluse_s_p->trig_Width = p_temp[1];   // 脉宽 us
+    shockPluse_s_p->trig_Width = p_temp[1];   // 脉宽 %
     shockPluse_s_p->trig_T = p_temp[2];       // 脉冲周期 ms
     shockPluse_s_p->trig_Count = p_temp[3];   // 单次刺激个数
     shockPluse_s_p->usense_T = p_temp[4];     // 感觉周期
