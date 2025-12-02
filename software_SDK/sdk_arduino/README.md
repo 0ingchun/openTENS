@@ -62,8 +62,9 @@ You can just download PCB Gerber or check project files in easyEDA.
 3. 脉冲输出线：电刺激模块OUT连接转接板后到DC2.5mm接口，最后连接电极片
 
 <p align="center">
-  <img src="../../images/c3demo_wire-pin.png" width="600">
+  <img src="../../images/c3demo_wire-pin.png" width="580">
 </p>
+
 
 
 <p align="center">

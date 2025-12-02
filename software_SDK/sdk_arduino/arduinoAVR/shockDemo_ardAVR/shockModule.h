@@ -25,9 +25,9 @@ extern "C" {
 /* USER CODE END Includes */
 
 /* USER CODE BEGIN Private defines */
-#define NET_P_Pin 8
-#define NET_N_Pin 7
-#define BOOST_L_Pin 6
+// #define NET_P_Pin 8
+// #define NET_N_Pin 7
+// #define BOOST_L_Pin 6
 
 #if defined(ARDUINO_ARCH_ESP32)
 	#define LEDC_CHANNEL_NUM 0

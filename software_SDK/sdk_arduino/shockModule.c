@@ -12,7 +12,7 @@
 
 void delay_us(uint32_t delay)	// 微妙延时函数
 {
-    delayMicroseconds(delay);
+  delayMicroseconds(delay);
 }
 
 
@@ -52,9 +52,6 @@ double doubleMap(double value, double in_min, double in_max, double out_min, dou
 // 各引脚配置	//
 void shockIOPinConfig(shockPluse_t* shockPluse_s_p)
 {
-	shockPluse_s_p->GPIO_Pin_Boost_L = BOOST_L_Pin;
-	shockPluse_s_p->GPIO_Pin_Net_P = NET_P_Pin;
-	shockPluse_s_p->GPIO_Pin_Net_N = NET_N_Pin;
 	pinMode(shockPluse_s_p->GPIO_Pin_Boost_L, OUTPUT);
 	pinMode(shockPluse_s_p->GPIO_Pin_Net_P, OUTPUT);
 	pinMode(shockPluse_s_p->GPIO_Pin_Net_N, OUTPUT);
@@ -174,8 +171,8 @@ void shockBoostVol(shockPluse_t* shockPluse_s_p)
 void shockTriggerAC(shockPluse_t* shockPluse_s_p, uint8_t GPIO_PIN_Sta)
 {
 	// 触发脚电平反置
-	digitalWrite(NET_P_Pin, GPIO_PIN_Sta);
-	digitalWrite(NET_N_Pin, !GPIO_PIN_Sta);
+	digitalWrite(shockPluse_s_p->GPIO_Pin_Net_P, GPIO_PIN_Sta);
+	digitalWrite(shockPluse_s_p->GPIO_Pin_Net_N, !GPIO_PIN_Sta);
 	// digitalWrite(NET_P_Pin, HIGH);
 	// digitalWrite(NET_N_Pin, LOW);
 	
@@ -183,8 +180,8 @@ void shockTriggerAC(shockPluse_t* shockPluse_s_p, uint8_t GPIO_PIN_Sta)
 	delay_us(shockPluse_s_p->trig_Width);
 	
 	// 触发脚全置低
-	digitalWrite(NET_P_Pin, LOW);
-	digitalWrite(NET_N_Pin, LOW);
+	digitalWrite(shockPluse_s_p->GPIO_Pin_Net_P, LOW);
+	digitalWrite(shockPluse_s_p->GPIO_Pin_Net_N, LOW);
 }
 
 // 输出触发 直流	//
@@ -192,11 +189,11 @@ void shockTriggerDC(shockPluse_t* shockPluse_s_p, uint8_t GPIO_PIN_Sta)
 {
 	// 直流输出触发通常设计为触发是低电位脚
 	// 触发脚电平拉高
-	digitalWrite(NET_N_Pin, GPIO_PIN_Sta);
+	digitalWrite(shockPluse_s_p->GPIO_Pin_Net_N, GPIO_PIN_Sta);
 	// 等待输出触发脉宽一周期
 	delay_us(shockPluse_s_p->trig_Width);
 	// 触发脚置低
-	digitalWrite(NET_N_Pin, LOW);
+	digitalWrite(shockPluse_s_p->GPIO_Pin_Net_N, LOW);
 }
 
 // 感觉 参数控制	//

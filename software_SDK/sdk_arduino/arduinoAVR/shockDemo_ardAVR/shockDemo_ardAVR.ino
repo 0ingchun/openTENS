@@ -4,7 +4,11 @@
 
 const int ledPin = 13; // 使用GPIO 2作为蓝灯的控制引脚
 
-shockPluse_t shockPluse_s;	// 申明一个电刺激结构体
+shockPluse_t shockPluse_s = {
+    .GPIO_Pin_Boost_L = 6,
+    .GPIO_Pin_Net_P   = 7,
+    .GPIO_Pin_Net_N   = 8,
+};
 
 void setup() {
   Serial.begin(115200);
