@@ -43,18 +43,28 @@ Step	功能	所需代码
 example：
 
 ```
-#define NET_P_Pin      10	// 第一个交流脉冲控制脚
-#define NET_N_Pin      6	// 第二个交流脉冲控制脚
-#define BOOST_L_Pin    7	// 升压控制脚
-#define LEDC_CHANNEL_NUM 0	// PWM产生通道控制脚（用于和升压控制脚内部绑定）
+#define NET_P_Pin      10	// 第一个交流脉冲控制脚，任意一个GPIO
+#define NET_N_Pin      6	// 第二个交流脉冲控制脚，任意一个GPIO
+#define BOOST_L_Pin    7	// 升压控制脚，必须支持pwm的引脚！
 ```
 
 
 
 #### ⚙ Step 2：初始化模块
+
+在全局申明一个新建电刺激对象结构体
+
+```
+shockPluse_t shockPluse_s;
+```
+
+在 setup() 函数里初始化电刺激功能，一个对象只需要初始化一次
+
 ```
 shockAllInit(&shockPluse_s);
 ```
+
+函数里初始化电刺激功能
 
 
 
@@ -68,11 +78,18 @@ Web UI 示例：
 对应代码设置（示例）：
 
 ```
-shockPluseSenseSet(&shockPluse_s, slider_temp);
+int settings_temp[5] = {5, 70, 40, 7, 500};
+// 0rder:{Level,Width us, Trig Period ms, Count, Sense Period ms}
+```
+
+把settings_temp设定参数传入电刺激对象
+
+```
+shockPluseSenseSet(&shockPluse_s, settings_temp);
 ```
 
 
-结构体内部设置（在 shockModule.c 中）：
+p.s. 可以参考一下结构体内部设置（在 shockModule.c 中）：
 
 ```
 void shockPluseSenseSet(shockPluse_t* shockPluse_s_p, int* p_temp){
@@ -87,6 +104,9 @@ void shockPluseSenseSet(shockPluse_t* shockPluse_s_p, int* p_temp){
 
 
 #### ⚡ Step 4：产生刺激脉冲
+
+使用该函数输出设置好的电刺激对象
+
 ```
 shockPulseSenseUnit(&shockPluse_s);
 ```

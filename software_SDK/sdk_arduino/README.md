@@ -88,13 +88,13 @@ You can just download PCB Gerber or check project files in easyEDA.
 
    参数关系：强度参数决定了输出强度，其他参数决定触觉感受。多个脉冲输出合成一个感觉（一个感觉包含多次周期性脉冲）
 
-   | 参数           | 效果                         | 单位 |
-   | -------------- | ---------------------------- | ---- |
-   | 感觉强度       | 调节感觉强弱                 | 级   |
-   | 输出脉冲脉宽   | 一般设定为70左右             | 微秒 |
-   | 输出脉冲周期   | 越小感觉越轻抚，越大越刺痛   | 毫秒 |
-   | 感觉的脉冲个数 | 本次感觉里有几个脉冲         | 个   |
-   | 感觉的脉冲周期 | 本次感觉结束后的间隔休息时间 | 毫秒 |
+   | 参数           | 效果                                                         | 单位 |
+   | -------------- | ------------------------------------------------------------ | ---- |
+   | 感觉强度       | （0时无感觉）调节感觉强弱                                    | 级   |
+   | 输出脉冲脉宽   | （必须大于0）感觉越小感觉越轻抚，越大越刺痛，推荐设置70用于测试 | 微秒 |
+   | 输出脉冲周期   | （必须大于0）越小感觉越用力，越大越无力                      | 毫秒 |
+   | 感觉的脉冲个数 | （至少为1）本次感觉里有几个脉冲                              | 个   |
+   | 感觉的脉冲周期 | （可以为0）本次感觉结束后的间隔休息时间                      | 毫秒 |
 
    
 
@@ -104,7 +104,7 @@ You can just download PCB Gerber or check project files in easyEDA.
 
 ### 电刺激库开发教程（Dev Library for Arduino / ESP32 / Keilu5_c）
 
-openTENS 提供 通用的电刺激开发库，可移植到任何 Arduino / ESP32 项目中，仅需 2 个文件（.c / .h） 即可实现电刺激功能。
+openTENS 提供 通用的电刺激开发库，可移植到任何 ArduinoAVR / ESP8266 / ESP32 项目中，仅需 2 个文件（.c / .h） 即可实现电刺激功能。
 
 ---
 
@@ -137,18 +137,28 @@ Step	功能	所需代码
 example：
 
 ```
-#define NET_P_Pin      10	// 第一个交流脉冲控制脚
-#define NET_N_Pin      6	// 第二个交流脉冲控制脚
-#define BOOST_L_Pin    7	// 升压控制脚
-#define LEDC_CHANNEL_NUM 0	// PWM产生通道控制脚（用于和升压控制脚内部绑定）
+#define NET_P_Pin      10	// 第一个交流脉冲控制脚，任意一个GPIO
+#define NET_N_Pin      6	// 第二个交流脉冲控制脚，任意一个GPIO
+#define BOOST_L_Pin    7	// 升压控制脚，必须支持pwm的引脚！
 ```
 
 
 
 #### ⚙ Step 2：初始化模块
+
+在全局申明一个新建电刺激对象结构体
+
+```
+shockPluse_t shockPluse_s;
+```
+
+在 setup() 函数里初始化电刺激功能，一个对象只需要初始化一次
+
 ```
 shockAllInit(&shockPluse_s);
 ```
+
+函数里初始化电刺激功能
 
 
 
@@ -157,16 +167,22 @@ shockAllInit(&shockPluse_s);
 Web UI 示例：
 可直接通过滑块调整参数，手动测试好想要的脉冲参数后，即可写入结构体：
 
-<p align="center"> <img src="../../images/web_ui_demo_version1.png" width="300"> </p>
+<p align="center"> <img src="../images/web_ui_demo_version1.png" width="300"> </p>
 
 对应代码设置（示例）：
 
 ```
-shockPluseSenseSet(&shockPluse_s, slider_temp);
+int settings_temp[5] = {5, 70, 40, 7, 500};
+// 0rder:{Level,Width us, Trig Period ms, Count, Sense Period ms}
 ```
 
+把settings_temp设定参数传入电刺激对象
 
-结构体内部设置（在 shockModule.c 中）：
+```
+shockPluseSenseSet(&shockPluse_s, settings_temp);
+```
+
+p.s. 可以参考一下结构体内部设置（在 shockModule.c 中）：
 
 ```
 void shockPluseSenseSet(shockPluse_t* shockPluse_s_p, int* p_temp){
@@ -184,7 +200,6 @@ void shockPluseSenseSet(shockPluse_t* shockPluse_s_p, int* p_temp){
 ```
 shockPulseSenseUnit(&shockPluse_s);
 ```
-
 
 只需调用一次，即可输出一次完整刺激。（注意，次函数为**阻塞性延迟函数**）
 
