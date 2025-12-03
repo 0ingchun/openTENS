@@ -3,7 +3,7 @@
 // Description: Library for esp8266 in Arduino
 // Author: 0ingChun    
 // Version: 1.0     
-// Date: 2024/12/1
+// Date: 2024/12/2
 
 #include "shockModule.h"
 
