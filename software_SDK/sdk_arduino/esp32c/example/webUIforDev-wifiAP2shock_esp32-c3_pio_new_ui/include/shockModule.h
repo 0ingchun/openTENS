@@ -1,3 +1,11 @@
+// Copyright (C), 2024
+// File name: shockModule.h
+// Description: Library for esp8266 in Arduino
+// Author: 0ingChun    
+// Version: 1.0     
+// Date: 2024/3/18
+#pragma once
+
 /* USER CODE BEGIN Header */
 
 /* USER CODE END Header */
@@ -12,16 +20,23 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 // #include "main.h"
 #include <stdint.h>
+#if defined(ARDUINO_ARCH_ESP32)
+#include "esp32-hal-ledc.h"
+#endif
 
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
 
 /* USER CODE BEGIN Private defines */
-#define NET_P_Pin 10
-#define NET_N_Pin 6
-#define BOOST_L_Pin 7
-#define LEDC_CHANNEL_NUM 0
+// #define NET_P_Pin 8
+// #define NET_N_Pin 7
+// #define BOOST_L_Pin 6
+
+#if defined(ARDUINO_ARCH_ESP32)
+	#define LEDC_CHANNEL_NUM 0
+#endif
+
 /* USER CODE END Private defines */
 
 /* USER CODE BEGIN Prototypes */
@@ -30,10 +45,13 @@ extern "C" {
 typedef struct
 {
 	// 模块引脚配置
+	uint8_t GPIO_Pin_Boost_L;
 	uint8_t GPIO_Pin_Net_P;
 	uint8_t GPIO_Pin_Net_N;
-	uint8_t GPIO_Pin_Boost_L;
+#if defined(ARDUINO_ARCH_ESP32)
 	uint8_t LEDC_CHANNEL;
+#endif
+
 	
 	// 以下这些值理论按原理图器件计算后不变
 	uint32_t boost_T;	// 升压 周期 us
@@ -42,7 +60,7 @@ typedef struct
 	uint16_t boost_uGroupCount;	// 升压 脉冲每组单位个数
 
 	// 以下为调变的参
-	uint16_t boost_Level;	// 感觉 级数 0~15
+	uint8_t boost_Level;	// 感觉 级数 0~15
 	uint32_t trig_Width;	// 触发脚 脉宽 us
 	float trig_T;	// 触发脚 周期 ms
 	uint16_t trig_Count;	// 触发脚 合成每次感觉要触发输出的次数 个
@@ -102,5 +120,4 @@ void shockPluseFunction(shockPluse_t* shockPluse_s_p);
 }
 #endif
 
-#endif /* __USER_LIB_H__ */
-
+#endif /* __SHOCK_MODULE_H__ */

@@ -5,12 +5,11 @@
 // Version: 1.0     
 // Date: 2024/12/2
 
-#include "shockModule.h"
-
 #include <Arduino.h>
 
+#include "shockModule.h"
 
-void delay_us(uint32_t delay)	// 微妙延时函数
+void delay_us(uint32_t delay)	// 微秒延时函数
 {
   delayMicroseconds(delay);
 }
@@ -65,6 +64,14 @@ void shockConstConfig(shockPluse_t* shockPluse_s_p)
 	shockPluse_s_p->boost_F = 25000;	// 升压 频率 hz
 	shockPluse_s_p->boost_Width = 75;	// 升压 脉宽 占空比 0.0~100.0
 	shockPluse_s_p->boost_uGroupCount = 8;	// 升压 脉冲每组单位个数
+
+	// 若用户未提前设置，给出默认强度和通道
+	if (shockPluse_s_p->boost_Level == 0) {
+		shockPluse_s_p->boost_Level = 1;
+	}
+#if defined(ARDUINO_ARCH_ESP32)
+	shockPluse_s_p->LEDC_CHANNEL = LEDC_CHANNEL_NUM;
+#endif
 	
 	// 参数计算
 	shockPluse_s_p->boost_Count = shockPluse_s_p->boost_uGroupCount * shockPluse_s_p->boost_Level;	// 升压 脉冲 每级总个数
@@ -103,7 +110,7 @@ uint8_t shockBoostSetFreq(shockPluse_t* shockPluse_s_p, uint32_t boostPwmFreq_HZ
 	ledcAttachPin(shockPluse_s_p->GPIO_Pin_Boost_L, shockPluse_s_p->LEDC_CHANNEL);
 
 	// 4. (重新)启动 PWM，设置一个占空比
-	ledcWrite(shockPluse_s_p->LEDC_CHANNEL, 191); // 8 位分辨率时 128/255 ≈ 75%
+	ledcWrite(shockPluse_s_p->LEDC_CHANNEL, 0); // 8 位分辨率时 191/255 ≈ 75%
 
 
 #else
@@ -249,4 +256,3 @@ void shockPluseFunction(shockPluse_t* shockPluse_s_p)
 	
 	
 }
-

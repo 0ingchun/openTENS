@@ -2,11 +2,11 @@
 #include <WiFi.h>           // ESP32 版 WiFi 库
 #include <WebServer.h>      // ESP32 版 WebServer 库
 #include <DNSServer.h>      // ESP32 同样支持该库
-#include <BLEDevice.h>
-#include <BLEUtils.h>
-#include <BLEServer.h>
+// #include <BLEDevice.h>
+// #include <BLEUtils.h>
+// #include <BLEServer.h>
 #include "shockModule.h"    // 电击功能头文件
-#include "Adafruit_NeoPixel.h"
+// #include "Adafruit_NeoPixel.h"
 #include "Arduino_BMI270_BMM150.h"
 
 
@@ -33,13 +33,18 @@ WebServer webServer(80);   // ESP32 版 WebServer
 DNSServer dnsServer;
 
 // 声明一个电刺激结构体
-shockPluse_t shockPluse_s;
+shockPluse_t shockPluse_s = {
+    .GPIO_Pin_Boost_L = 7,
+    .GPIO_Pin_Net_P   = 10,
+    .GPIO_Pin_Net_N   = 6,
+    .LEDC_CHANNEL     = 0,
+};
 
 // Matrix Data PIN
-#define PIN_PIXS 8
-#define PIX_NUM 1
+// #define PIN_PIXS 8
+// #define PIX_NUM 1
 
-Adafruit_NeoPixel pixels(PIX_NUM, PIN_PIXS, NEO_GRB + NEO_KHZ800);
+// Adafruit_NeoPixel pixels(PIX_NUM, PIN_PIXS, NEO_GRB + NEO_KHZ800);
 
 
 #ifndef I2CSPEED

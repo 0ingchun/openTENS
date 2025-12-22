@@ -4,6 +4,7 @@
 // Author: 0ingChun    
 // Version: 1.0     
 // Date: 2024/3/18
+#pragma once
 
 /* USER CODE BEGIN Header */
 
@@ -19,6 +20,17 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 // #include "main.h"
 #include <stdint.h>
+
+#if defined(ARDUINO_ARCH_ESP32)
+#include "esp32-hal-ledc.h"
+#if !defined(__cplusplus)
+// 当以 C 源文件编译时，手动声明 LEDC 接口，避免隐式声明告警
+double ledcSetup(uint8_t channel, double freq, uint8_t resolution_bits);
+void ledcWrite(uint8_t channel, uint32_t duty);
+void ledcAttachPin(uint8_t pin, uint8_t channel);
+void ledcDetachPin(uint8_t pin);
+#endif
+#endif
 
 /* USER CODE BEGIN Includes */
 
@@ -62,6 +74,10 @@ typedef struct
 	float usense_T;	// 触发每次感觉 周期 ms
 	
 	uint16_t boost_Count;	// 升压 脉冲 每级总个数
+
+#if defined(ARDUINO_ARCH_ESP32)
+	uint8_t LEDC_CHANNEL;	// ESP32: LEDC 通道号
+#endif
 	
 } shockPluse_t;
 
@@ -115,5 +131,4 @@ void shockPluseFunction(shockPluse_t* shockPluse_s_p);
 }
 #endif
 
-#endif /* __USER_LIB_H__ */
-
+#endif /* __SHOCK_MODULE_H__ */

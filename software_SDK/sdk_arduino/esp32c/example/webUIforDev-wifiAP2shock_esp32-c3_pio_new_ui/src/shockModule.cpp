@@ -1,11 +1,20 @@
-#include "shockModule.h"
+// Copyright (C), 2024
+// File name: shockModule.c
+// Description: Library for esp8266 in Arduino
+// Author: 0ingChun    
+// Version: 1.0     
+// Date: 2024/12/2
 
 #include <Arduino.h>
+#if defined(ARDUINO_ARCH_ESP32)
+#include "esp32-hal-ledc.h"
+#endif
 
+#include "shockModule.h"
 
-void delay_us(uint32_t delay)	// 微妙延时函数
+void delay_us(uint32_t delay)	// 微秒延时函数
 {
-    delayMicroseconds(delay);
+  delayMicroseconds(delay);
 }
 
 
@@ -45,10 +54,6 @@ double doubleMap(double value, double in_min, double in_max, double out_min, dou
 // 各引脚配置	//
 void shockIOPinConfig(shockPluse_t* shockPluse_s_p)
 {
-	shockPluse_s_p->GPIO_Pin_Net_P = NET_P_Pin;
-	shockPluse_s_p->GPIO_Pin_Net_N = NET_N_Pin;
-	shockPluse_s_p->GPIO_Pin_Boost_L = BOOST_L_Pin;
-	shockPluse_s_p->LEDC_CHANNEL = LEDC_CHANNEL_NUM;
 	pinMode(shockPluse_s_p->GPIO_Pin_Boost_L, OUTPUT);
 	pinMode(shockPluse_s_p->GPIO_Pin_Net_P, OUTPUT);
 	pinMode(shockPluse_s_p->GPIO_Pin_Net_N, OUTPUT);
@@ -58,57 +63,96 @@ void shockIOPinConfig(shockPluse_t* shockPluse_s_p)
 void shockConstConfig(shockPluse_t* shockPluse_s_p)
 {
 	// 这些值理论按原理图器件计算后不变
-	shockPluse_s_p->boost_T = 40; //40;	// 升压 周期 us
+	shockPluse_s_p->boost_T = 40;	// 升压 周期 us
 	shockPluse_s_p->boost_F = 25000;	// 升压 频率 hz
 	shockPluse_s_p->boost_Width = 75;	// 升压 脉宽 占空比 0.0~100.0
-	shockPluse_s_p->boost_uGroupCount = 8;	// 升压 脉冲每组单位个数8
+	shockPluse_s_p->boost_uGroupCount = 8;	// 升压 脉冲每组单位个数
+#if defined(ARDUINO_ARCH_ESP32)
+	if (shockPluse_s_p->LEDC_CHANNEL == 0) {
+		shockPluse_s_p->LEDC_CHANNEL = LEDC_CHANNEL_NUM;
+	}
+#endif
+	if (shockPluse_s_p->boost_Level == 0) {
+		shockPluse_s_p->boost_Level = 1; // 默认感觉级数
+	}
 	
 	// 参数计算
 	shockPluse_s_p->boost_Count = shockPluse_s_p->boost_uGroupCount * shockPluse_s_p->boost_Level;	// 升压 脉冲 每级总个数
 }
 
-// // 设置pwm频率	//
-// uint8_t shockBoostSetFreq(shockPluse_t* shockPluse_s_p, uint32_t boostPwmFreq_HZ)
-// {
-// 	// 停止PWM输出
-// 	analogWrite(shockPluse_s_p->GPIO_Pin_Boost_L, 0);
-// 	// 更新PSC和ARR
-// 	analogWriteFreq(boostPwmFreq_HZ);
-// 	// 使更新生效
-// 	analogWriteRange(100);
-// 	// 重新启动PWM输出
-// 	return 0;
-// }
-
-// 选择一个 LEDC 通道与分辨率
-// #define LEDC_CHANNEL_0      0
-// #define LEDC_TIMER_13_BIT   13  // 例如 13 位分辨率
-// #define LEDC_BASE_FREQ      5000 // 可设置一个默认频率
-
+// 设置pwm频率	//
 uint8_t shockBoostSetFreq(shockPluse_t* shockPluse_s_p, uint32_t boostPwmFreq_HZ)
 {
-    // 1. 若需要，先取消之前可能绑定的 PWM（确保开始前没有残留）
-    ledcDetachPin(shockPluse_s_p->GPIO_Pin_Boost_L);
 
-    // 2. 根据你想要的新频率 & 分辨率配置 LEDC 通道
-    //    这里以 8 位分辨率为例：
-    ledcSetup(shockPluse_s_p->LEDC_CHANNEL, boostPwmFreq_HZ, 8);
+#if defined(ARDUINO_ARCH_AVR)
 
-    // 3. 将引脚绑定到 LEDC 通道
-    ledcAttachPin(shockPluse_s_p->GPIO_Pin_Boost_L, shockPluse_s_p->LEDC_CHANNEL);
+	// AVR 上改 PWM 频率要动 Timer 寄存器
+	// 如果你不打算搞底层，这里可以直接忽略 freq，只做 pinMode
+	// pinMode(shockPluse_s_p->GPIO_Pin_Boost_L, OUTPUT); // 已经做过了
 
-    // 4. (重新)启动 PWM，设置一个占空比（如 50%）
-    ledcWrite(shockPluse_s_p->LEDC_CHANNEL, 191); // 8 位分辨率时 128/255 ≈ 50%
+#elif defined(ARDUINO_ARCH_ESP8266)
 
-    return 0;
+	// 停止PWM输出
+	analogWrite(shockPluse_s_p->GPIO_Pin_Boost_L, 0);
+	// 更新PSC和ARR
+	analogWriteFreq(boostPwmFreq_HZ);
+	// 使更新生效
+	analogWriteRange(100);
+	// 重新启动PWM输出
+
+#elif defined(ARDUINO_ARCH_ESP32)
+
+	
+
+#if defined(USE_LEDC_PIN_API)
+	// 旧 API：ledcSetup + ledcAttachPin + ledcWrite（通道号版本）
+	ledcDetachPin(shockPluse_s_p->GPIO_Pin_Boost_L);	// 需要，先取消之前可能绑定的 PWM（确保开始前没有残留）
+	ledcSetup(shockPluse_s_p->LEDC_CHANNEL, boostPwmFreq_HZ, 8);
+	ledcAttachPin(shockPluse_s_p->GPIO_Pin_Boost_L, shockPluse_s_p->LEDC_CHANNEL);
+	ledcWrite(shockPluse_s_p->LEDC_CHANNEL, 0);
+#else
+	// 新 API：ledcAttachChannel + ledcWriteChannel
+	ledcDetach(shockPluse_s_p->GPIO_Pin_Boost_L);
+	ledcAttachChannel(shockPluse_s_p->GPIO_Pin_Boost_L, boostPwmFreq_HZ, 8, shockPluse_s_p->LEDC_CHANNEL);
+	ledcWriteChannel(shockPluse_s_p->LEDC_CHANNEL, 0);
+#endif
+
+
+#else
+#error "Unsupported architecture! This library only supports AVR, ESP8266, and ESP32."
+#endif
+
+	return 0;
 }
 
 // 设置pwm占空比	//
 void shockBoostSetDuty(shockPluse_t* shockPluse_s_p, float pwmDutyCycle)
 {
-	// analogWrite(shockPluse_s_p->GPIO_Pin_Boost_L, doubleMap(pwmDutyCycle, 0, 100, 0, 1000));
-	// analogWrite(shockPluse_s_p->GPIO_Pin_Boost_L, pwmDutyCycle);
-	ledcWrite(shockPluse_s_p->LEDC_CHANNEL, pwmDutyCycle);
+
+	// 限制在 0~100
+	if (pwmDutyCycle < 0.0f)  pwmDutyCycle = 0.0f;
+	if (pwmDutyCycle > 100.0f) pwmDutyCycle = 100.0f;
+	
+#if defined(ARDUINO_ARCH_AVR)
+
+	analogWrite(shockPluse_s_p->GPIO_Pin_Boost_L, (uint32_t)doubleMap(pwmDutyCycle, 0, 100, 0, 255));
+
+#elif defined(ARDUINO_ARCH_ESP8266)
+
+	analogWrite(shockPluse_s_p->GPIO_Pin_Boost_L, (uint32_t)doubleMap(pwmDutyCycle, 0, 100, 0, 100));
+
+#elif defined(ARDUINO_ARCH_ESP32)
+
+#if defined(USE_LEDC_PIN_API)
+	ledcWrite(shockPluse_s_p->LEDC_CHANNEL, (uint32_t)doubleMap(pwmDutyCycle, 0, 100, 0, 255));
+#else
+	ledcWriteChannel(shockPluse_s_p->LEDC_CHANNEL, (uint32_t)doubleMap(pwmDutyCycle, 0, 100, 0, 255));
+#endif
+
+#else
+#error "Unsupported architecture! This library only supports AVR, ESP8266, and ESP32."
+#endif
+
 }
 
 // 电刺激总初始化	//
@@ -142,34 +186,31 @@ void shockBoostVol(shockPluse_t* shockPluse_s_p)
 // 输出触发 交流	//
 void shockTriggerAC(shockPluse_t* shockPluse_s_p, uint8_t GPIO_PIN_Sta)
 {
-	if (shockPluse_s_p->trig_Width > 0)
-	{
-		// 触发脚电平反置
-		digitalWrite(NET_P_Pin, GPIO_PIN_Sta);
-		digitalWrite(NET_N_Pin, !GPIO_PIN_Sta);
-		// digitalWrite(NET_P_Pin, HIGH);
-		// digitalWrite(NET_N_Pin, LOW);
-		
-		// 等待输出触发脉宽一周期
-		delay_us(shockPluse_s_p->trig_Width);
-	}
+	// 触发脚电平反置
+	digitalWrite(shockPluse_s_p->GPIO_Pin_Net_P, GPIO_PIN_Sta);
+	digitalWrite(shockPluse_s_p->GPIO_Pin_Net_N, !GPIO_PIN_Sta);
+	// digitalWrite(NET_P_Pin, HIGH);
+	// digitalWrite(NET_N_Pin, LOW);
+	
+	// 等待输出触发脉宽一周期
+	delay_us(shockPluse_s_p->trig_Width);
 	
 	// 触发脚全置低
-	digitalWrite(NET_P_Pin, LOW);
-	digitalWrite(NET_N_Pin, LOW);
+	digitalWrite(shockPluse_s_p->GPIO_Pin_Net_P, LOW);
+	digitalWrite(shockPluse_s_p->GPIO_Pin_Net_N, LOW);
 }
 
-// // 输出触发 直流	//
-// void shockTriggerDC(shockPluse_t* shockPluse_s_p, uint8_t GPIO_PIN_Sta)
-// {
-// 	// 直流输出触发通常设计为触发是低电位脚
-// 	// 触发脚电平拉高
-// 	digitalWrite(NET_N_Pin, GPIO_PIN_Sta);
-// 	// 等待输出触发脉宽一周期
-// 	delay_us(shockPluse_s_p->trig_Width);
-// 	// 触发脚置低
-// 	digitalWrite(NET_N_Pin, LOW);
-// }
+// 输出触发 直流	//
+void shockTriggerDC(shockPluse_t* shockPluse_s_p, uint8_t GPIO_PIN_Sta)
+{
+	// 直流输出触发通常设计为触发是低电位脚
+	// 触发脚电平拉高
+	digitalWrite(shockPluse_s_p->GPIO_Pin_Net_N, GPIO_PIN_Sta);
+	// 等待输出触发脉宽一周期
+	delay_us(shockPluse_s_p->trig_Width);
+	// 触发脚置低
+	digitalWrite(shockPluse_s_p->GPIO_Pin_Net_N, LOW);
+}
 
 // 感觉 参数控制	//
 void shockPluseSenseSet(shockPluse_t* shockPluse_s_p, int* p_temp)
@@ -224,4 +265,3 @@ void shockPluseFunction(shockPluse_t* shockPluse_s_p)
 	
 	
 }
-

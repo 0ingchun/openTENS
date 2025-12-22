@@ -2,8 +2,9 @@
 // File name: shockModule.h
 // Description: Library for esp8266 in Arduino
 // Author: 0ingChun    
-// Version: 1.0     
+// Version: 1.1
 // Date: 2024/3/18
+#pragma once
 
 /* USER CODE BEGIN Header */
 
@@ -20,6 +21,19 @@ extern "C" {
 // #include "main.h"
 #include <stdint.h>
 
+#define USE_LEDC_HAL_API
+// #define USE_LEDC_PIN_API
+
+#if defined(ARDUINO_ARCH_ESP32)
+	#if defined(USE_LEDC_PIN_API)
+		#include "driver/ledc.h"
+	#elif defined(USE_LEDC_HAL_API)
+		#include "esp32-hal-ledc.h"
+	#else
+		#error "Please define USE_LEDC_PIN_API or USE_LEDC_HAL_API for ESP32 in src/shockModule.h"
+	#endif
+#endif
+
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
@@ -30,15 +44,21 @@ extern "C" {
 // #define BOOST_L_Pin 6
 
 #if defined(ARDUINO_ARCH_ESP32)
-	#define LEDC_CHANNEL_NUM 0
-	#warning "Successfully set up the PWM channel of the ESP32 series."
-#else
-	#warning "Other boards do not require defining the PWM channel here."
+	#define LEDC_CHANNEL_NUM_DEFAULT 0
+	#define LEDC_RESOLUTION_BIT_DEFAULT 8
 #endif
 
 /* USER CODE END Private defines */
 
 /* USER CODE BEGIN Prototypes */
+
+// 输出模式
+typedef enum {
+	SHOCK_MODE_AC_NEGATIVE = 0,    // 交流反向
+	SHOCK_MODE_AC_POSITIVE,        // 交流正向
+	SHOCK_MODE_AC_BIDIR,      	   // 交流双向
+	SHOCK_MODE_DC,        	       // 直流
+} shock_output_mode_t;
 
 // 电刺激参数结构体	//
 typedef struct
@@ -47,6 +67,11 @@ typedef struct
 	uint8_t GPIO_Pin_Boost_L;
 	uint8_t GPIO_Pin_Net_P;
 	uint8_t GPIO_Pin_Net_N;
+#if defined(ARDUINO_ARCH_ESP32)
+	uint8_t LEDC_CHANNEL;
+	uint8_t LEDC_RESOLUTION;
+#endif
+
 	
 	// 以下这些值理论按原理图器件计算后不变
 	uint32_t boost_T;	// 升压 周期 us
@@ -62,6 +87,8 @@ typedef struct
 	float usense_T;	// 触发每次感觉 周期 ms
 	
 	uint16_t boost_Count;	// 升压 脉冲 每级总个数
+
+	shock_output_mode_t output_mode; // 输出模式：DC/ACx
 	
 } shockPluse_t;
 
@@ -85,25 +112,28 @@ void shockConstConfig(shockPluse_t* shockPluse_s_p);
 uint8_t shockBoostSetFreq(shockPluse_t* shockPluse_s_p, uint32_t boostPwmFreq_HZ);
 
 // 设置pwm占空比
-void shockBoostSetDuty(shockPluse_t* shockPluse_s_p, float pwmDutyCycle);
+void shockBoostSetDuty(shockPluse_t* shockPluse_s_p, uint32_t pwmDutyCycle);
 
 // 电刺激总初始化
 void shockAllInit(shockPluse_t* shockPluse_s_p);
 
 // 升压控制
-void shockBoostVol(shockPluse_t* shockPluse_s_p);
+uint8_t shockBoostVol(shockPluse_t* shockPluse_s_p);
 
 // 输出触发 交流
 void shockTriggerAC(shockPluse_t* shockPluse_s_p, uint8_t GPIO_PIN_Sta);
 
 // 输出触发 直流
-void shockTriggerDC(shockPluse_t* shockPluse_s_p, uint8_t GPIO_PIN_Sta);
+void shockTriggerDC(shockPluse_t* shockPluse_s_p);
 
 // 感觉 参数控制
 void shockPluseSenseSet(shockPluse_t* shockPluse_s_p, int* p_temp);
 
 // 脉冲输出 单位感觉
 void shockPulseSenseUnit(shockPluse_t* shockPluse_s_p);
+
+// 脉冲输出 停止，自动释放残留电压
+void shockPluseStop(shockPluse_t* shockPluse_s_p);
 
 // 脉冲输出 函数波形
 void shockPluseFunction(shockPluse_t* shockPluse_s_p);
@@ -115,5 +145,4 @@ void shockPluseFunction(shockPluse_t* shockPluse_s_p);
 }
 #endif
 
-#endif /* __USER_LIB_H__ */
-
+#endif /* __SHOCK_MODULE_H__ */
