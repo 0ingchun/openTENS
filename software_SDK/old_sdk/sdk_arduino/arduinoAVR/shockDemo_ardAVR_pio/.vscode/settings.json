@@ -73,19 +73,5 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "files.associations": {
-    "*.tcc": "cpp",
-    "ostream": "cpp",
-    "array": "cpp",
-    "deque": "cpp",
-    "string": "cpp",
-    "unordered_map": "cpp",
-    "unordered_set": "cpp",
-    "vector": "cpp",
-    "string_view": "cpp",
-    "initializer_list": "cpp",
-    "*.cppooo": "cpp"
-  },
-  "cmake.sourceDirectory": "E:/Document/Code/openTENS/software_SDK/sdk_arduino/esp32c/example/webUIforDev-wifiAP2shock_esp32-c3_pio_new_ui/lib/Adafruit_BusIO"
+  "C_Cpp_Runner.msvcSecureNoWarnings": false
 }

@@ -24,7 +24,7 @@ int settings_temp[5] = {0};
 
 void SenseSetting_1()
 {
-  settings_temp[0] = 10; // Level
+  settings_temp[0] = 3; // Level
   settings_temp[1] = 70;  // Width %
   settings_temp[2] = 1;  // Trig Period ms
   settings_temp[3] = 10;  // Count
@@ -33,7 +33,7 @@ void SenseSetting_1()
 
 void SenseSetting_2()
 {
-  settings_temp[0] = 10; // Level
+  settings_temp[0] = 3; // Level
   settings_temp[1] = 50;  // Width %
   settings_temp[2] = 5;  // Trig Period ms
   settings_temp[3] = 10;  // Count

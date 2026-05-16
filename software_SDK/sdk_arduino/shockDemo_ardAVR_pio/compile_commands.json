@@ -1,0 +1,164 @@
+[
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\CDC.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\CDC.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\CDC.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\CDC.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial0.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial0.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial0.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial0.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial1.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial1.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial1.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial1.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial2.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial2.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial2.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial2.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial3.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial3.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial3.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial3.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\IPAddress.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\IPAddress.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\IPAddress.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\IPAddress.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\PluggableUSB.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\PluggableUSB.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\PluggableUSB.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\PluggableUSB.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\Print.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\Print.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\Print.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\Print.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\Stream.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\Stream.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\Stream.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\Stream.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\Tone.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\Tone.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\Tone.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\Tone.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\USBCore.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\USBCore.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\USBCore.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\USBCore.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\WInterrupts.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\WInterrupts.c",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\WInterrupts.c",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\WInterrupts.c.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\WMath.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\WMath.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\WMath.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\WMath.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\WString.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\WString.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\WString.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\WString.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\abi.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\abi.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\abi.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\abi.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\hooks.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\hooks.c",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\hooks.c",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\hooks.c.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\main.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\main.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\main.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\main.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\new.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\new.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\new.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\new.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring.c",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring.c",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring.c.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_analog.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_analog.c",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_analog.c",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_analog.c.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_digital.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_digital.c",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_digital.c",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_digital.c.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -mmcu=atmega328p -x assembler-with-cpp -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs -c -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_pulse.S.o C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_pulse.S",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_pulse.S",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_pulse.S.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_pulse.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_pulse.c",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_pulse.c",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_pulse.c.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_shift.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_shift.c",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "C:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_shift.c",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_shift.c.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\src\\ShockModule.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Iinclude -Isrc -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs src\\ShockModule.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "src\\ShockModule.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\src\\ShockModule.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\lenovo\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\src\\main.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Iinclude -Isrc -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\lenovo\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs src\\main.cpp",
+        "directory": "C:\\Users\\lenovo\\OneDrive\\yunCode\\openTENS\\software_SDK\\sdk_arduino\\arduinoAVR\\\u5f00\u73af\u963b\u585e\u7248\u672c\u901f\u901f\u6539\u5b8c\u53d1\u5e03\\shockDemo_ardAVR_pio",
+        "file": "src\\main.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\src\\main.cpp.o"
+    }
+]
